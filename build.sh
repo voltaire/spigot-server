@@ -8,3 +8,4 @@ else
 fi
 
 java -jar /BuildTools.jar --rev ${MINECRAFT_VERSION}
+mv /build/spigot-${MINECRAFT_VERSION}.jar /spigot.jar
