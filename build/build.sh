@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "${SOURCE_BRANCH}" = "main" ] || [ -z "${SOURCE_BRANCH}"]
+if [ -z "${DOCKER_TAG}"]
 then
     MINECRAFT_VERSION="latest"
 else
