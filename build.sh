@@ -8,4 +8,4 @@ else
 fi
 
 java -jar /BuildTools.jar --rev ${MINECRAFT_VERSION}
-mv /build/spigot-${MINECRAFT_VERSION}.jar /spigot.jar
+find . -regextype posix-egrep -regex '\./spigot-([0-9\.].*).jar' -exec mv {} /spigot.jar \;

@@ -10,7 +10,7 @@ RUN java -jar /srv/spigot.jar
 
 ## jar location
 
-the jar is always at `/spigot.jar`.
+the jar is at `/spigot.jar`.
 
 ## tags
 
