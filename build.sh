@@ -1,5 +1,7 @@
 #!/bin/sh
 
+env
+
 if [ -z "${DOCKER_TAG}"]
 then
     MINECRAFT_VERSION="latest"
