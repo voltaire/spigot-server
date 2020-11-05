@@ -14,8 +14,6 @@ the jar is at `/spigot.jar`.
 
 ## tags
 
-tags correspond to minecraft server version. [configuration is defined in docker hub](https://hub.docker.com/repository/docker/voltairemc/spigot-server/builds/edit)
+tags correspond to minecraft server version. See the full list of available minecraft versions:
 
-* `latest`
-* `1.16.3`
-* `1.11.2`
+https://github.com/orgs/voltaire/packages/container/spigot-server/versions
