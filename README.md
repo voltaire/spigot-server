@@ -14,6 +14,6 @@ the jar is at `/spigot.jar`.
 
 ## tags
 
-tags correspond to minecraft server version. See the full list of available minecraft versions:
+tags correspond to minecraft server version.
 
-https://github.com/orgs/voltaire/packages/container/spigot-server/versions
+[See the full list of available minecraft versions](https://github.com/orgs/voltaire/packages/container/spigot-server/versions)
