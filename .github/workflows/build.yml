@@ -24,4 +24,4 @@ jobs:
         with:
           push: true
           tags: ghcr.io/${{ github.repository }}:${{ matrix.minecraft_version }}
-          build_args: MINECRAFT_VERSION=${{ matrix.minecraft_version }}
+          build-args: MINECRAFT_VERSION=${{ matrix.minecraft_version }}
