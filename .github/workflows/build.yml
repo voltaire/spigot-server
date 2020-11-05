@@ -1,4 +1,8 @@
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - LICENSE
+      - README.md
 name: build and push
 jobs:
   pipeline:

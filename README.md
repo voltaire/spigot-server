@@ -4,7 +4,7 @@ builds the spigot jar that you can copy into your dockerfile like so:
 
 ```Dockerfile
 FROM amazoncorretto:8-alpine-jdk
-COPY --from=voltairemc/spigot-server:1.11.2 /spigot.jar /srv/spigot.jar
+COPY --from=ghcr.io/voltaire/spigot-server:1.11.2 /spigot.jar /srv/spigot.jar
 RUN java -jar /srv/spigot.jar
 ```
 
