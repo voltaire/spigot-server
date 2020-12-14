@@ -41,9 +41,33 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.CR_PAT }}
+      - name: build minecraft
+        env:
+          MINECRAFT_VERSION: ${{ matrix.minecraft_version }}
+        run: |
+          ./build.sh
       - name: docker build and push
         uses: docker/build-push-action@v2
         with:
           push: true
           tags: ghcr.io/${{ github.repository }}:${{ matrix.minecraft_version }}
           build-args: MINECRAFT_VERSION=${{ matrix.minecraft_version }}
+      - name: create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ matrix.minecraft_version }}
+          release_name: ${{ matrix.minecraft_version }}
+          draft: false
+          prerelease: false
+      - name: upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./spigot.jar
+          asset_name: spigot.jar
+          asset_content_type: application/java-archive
