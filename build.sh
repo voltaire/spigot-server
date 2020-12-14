@@ -8,3 +8,4 @@ java -jar ./BuildTools.jar --rev ${MINECRAFT_VERSION}
 
 echo "rename spigot.jar"
 find . -regextype posix-egrep -regex '\./spigot-([0-9\.].*).jar' -exec mv {} ./spigot.jar \;
+ls -lha ./spigot.jar
